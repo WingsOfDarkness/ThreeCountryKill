@@ -32,7 +32,25 @@ public class SelectWnd : MonoBehaviour
 
     public void OnNumEdited()
     {
-        PlayerPrefs.SetString("PlayerNum", iptNum.text);
+        if (int.TryParse(iptNum.text, out int num))
+        {
+            if (num > 0 && num < 21)
+            {
+                PlayerPrefs.SetString("PlayerNum", iptNum.text);
+            }
+            else if(num <=0)
+            {
+                iptNum.text = "1";
+            }
+            else
+            {
+                iptNum.text = "20";
+            }
+        }
+        else
+        {
+            iptNum.text = "1";
+        }
     }
 
     private void Update()
