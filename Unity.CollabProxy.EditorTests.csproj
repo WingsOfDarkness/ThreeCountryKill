@@ -41,7 +41,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Folder Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Tests\Editor\Collaborate" />
+     <Folder Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Tests\Editor\Collaborate\Scenario" />
+     <Folder Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Tests\Editor\Collaborate\Presenters" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Tests\Editor\Collaborate\Unity.CollabProxy.EditorTests.asmdef" />
+     <Folder Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Tests\Editor\Collaborate\Models" />
+     <Folder Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Tests\Editor\Collaborate\Models\Providers" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2021.3.6f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

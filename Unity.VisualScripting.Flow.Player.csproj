@@ -442,7 +442,6 @@
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Ports\IUnitValuePortDefinition.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Framework\Events\Navigation\OnDestinationReached.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Framework\Math\Vector3\Vector3Divide.cs" />
-     <None Include="Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Unity.VisualScripting.Flow.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2021.3.6f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

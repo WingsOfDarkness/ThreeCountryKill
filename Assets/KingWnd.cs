@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -9,9 +10,7 @@ using Random = UnityEngine.Random;
 public class KingWnd : MonoBehaviour
 {
     public GameObject content;
-    public GameObject targetHero;
-    public GameObject confirmBtn;
-    public GameObject focusWnd;
+    public FocusWnd focusWnd;
     public int seed;
     public bool useTimeSeed;
     public List<int> nums;
@@ -65,25 +64,9 @@ public class KingWnd : MonoBehaviour
 
     public void OnClickHero(GameObject parent)
     {
-        targetHero = parent;
+        focusWnd.gameObject.SetActive(true);
+        focusWnd.targetHero = parent;
+        focusWnd.content = content;
         focusWnd.transform.GetChild(0).GetComponent<Image>().sprite = parent.GetComponent<Image>().sprite;
-        focusWnd.SetActive(true);
-    }
-
-    public void OnClickSubmit()
-    {
-        if (targetHero == null) return;
-        for (int i = 0; i < content.transform.childCount; i++)
-        {
-            if (content.transform.GetChild(i).gameObject != targetHero)
-            {
-                Destroy(content.transform.GetChild(i).gameObject);
-            }
-        }
-
-        targetHero.transform.SetParent(transform);
-        targetHero.transform.localPosition = new Vector2(0, 0);
-        content.SetActive(false);
-        confirmBtn.SetActive(false);
     }
 }

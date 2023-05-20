@@ -41,6 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Folder Include="Library\PackageCache\com.unity.burst@1.6.6\Tests\Editor\SeparateAssembly" />
      <None Include="Library\PackageCache\com.unity.burst@1.6.6\Tests\Editor\SeparateAssembly\SeparateAssembly.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2021.3.6f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

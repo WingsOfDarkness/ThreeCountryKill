@@ -48,6 +48,10 @@
      <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.3\Editor\AssemblyInfo.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.3\Editor\ImagePacker\ImagePackNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.3\Editor\ImagePacker\ImagePackerDebugEditor.cs" />
+     <Folder Include="Library\PackageCache\com.unity.2d.common@6.0.3\Editor" />
+     <Folder Include="Library\PackageCache\com.unity.2d.common@6.0.3\Editor\TextureGenerator" />
+     <Folder Include="Library\PackageCache\com.unity.2d.common@6.0.3\Editor\ImagePacker" />
+     <Folder Include="Library\PackageCache\com.unity.2d.common@6.0.3\Editor\ImagePacker\Jobs" />
      <None Include="Library\PackageCache\com.unity.2d.common@6.0.3\Editor\Unity.2D.Common.Editor.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2021.3.6f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

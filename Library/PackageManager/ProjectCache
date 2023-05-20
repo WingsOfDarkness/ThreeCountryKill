@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638196415996661201
-    m_Hash: 2488401325
+      ticks: 638201653549230824
+    m_Hash: 59524315
   m_LockFileStatus:
     m_FilePath: G:/GameMaking/Unity/Apollo/Mine/ThreeCountryKill/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638196416110544990
-    m_Hash: 386253549
+      ticks: 638201653549345973
+    m_Hash: 4191947609
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -284,12 +284,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.0
     nextVersion: 
-- packageId: com.unity.ide.rider@3.0.15
+- packageId: com.unity.ide.rider@3.0.21
   testable: 0
   isDirectDependency: 1
-  version: 3.0.15
+  version: 3.0.21
   source: 1
-  resolvedPath: G:\GameMaking\Unity\Apollo\Mine\ThreeCountryKill\Library\PackageCache\com.unity.ide.rider@3.0.15
+  resolvedPath: G:\GameMaking\Unity\Apollo\Mine\ThreeCountryKill\Library\PackageCache\com.unity.ide.rider@3.0.21
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -366,13 +366,13 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637914298700000000
-  documentationUrl: 
+  datePublishedTicks: 638175749180000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: b61ff0378932fdf03b5891e09c91728337de674c
+    revision: bb7732dcafe867368246b7661dda05368b74dd8e
     path: 
   unityLifecycle:
     version: 3.0.15
@@ -3762,6 +3762,7 @@ m_ResolvedPackages:
     - 1.7.1
     - 1.8.1
     - 1.8.2
+    - 1.9.0
     compatible:
     - 1.4.0
     - 1.4.1
@@ -3773,6 +3774,7 @@ m_ResolvedPackages:
     - 1.7.1
     - 1.8.1
     - 1.8.2
+    - 1.9.0
     verified: 1.4.3
   dependencies:
   - name: com.unity.modules.unitywebrequest
