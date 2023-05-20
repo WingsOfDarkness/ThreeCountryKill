@@ -44,8 +44,9 @@ public class KingWnd : MonoBehaviour
             int randomIndex = Random.Range(0, MainWnd.notKingSprites.Length);
             if (nums.Contains(randomIndex)) continue;
             nums.Add(randomIndex);
-            content.transform.GetChild(i - 3 * int.Parse(iptNum.text) + 3 + 5).GetComponent<Image>().sprite =
-                MainWnd.notKingSprites[randomIndex];
+            Transform image = content.transform.GetChild(i - 3 * int.Parse(iptNum.text) + 3 + 5);
+            image.GetComponent<Image>().sprite = MainWnd.notKingSprites[randomIndex];
+            image.GetChild(0).GetComponent<Text>().text = image.GetComponent<Image>().sprite.name;
             i++;
         }
 
@@ -57,7 +58,9 @@ public class KingWnd : MonoBehaviour
             int randomIndex = Random.Range(0, MainWnd.kingSprites.Length);
             if (nums.Contains(randomIndex)) continue;
             nums.Add(randomIndex);
-            content.transform.GetChild(i).GetComponent<Image>().sprite = MainWnd.kingSprites[randomIndex];
+            Transform image = content.transform.GetChild(i);
+            image.GetComponent<Image>().sprite = MainWnd.kingSprites[randomIndex];
+            image.GetChild(0).GetComponent<Text>().text = image.GetComponent<Image>().sprite.name;
             i++;
         }
     }

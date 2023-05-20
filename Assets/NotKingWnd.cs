@@ -45,8 +45,9 @@ public class NotKingWnd : MonoBehaviour
             int randomIndex = Random.Range(0, MainWnd.notKingSprites.Length);
             if (nums.Contains(randomIndex)) continue;
             nums.Add(randomIndex);
-            content.transform.GetChild(i - 3 * int.Parse(iptNum.text) + 3).GetComponent<Image>().sprite =
-                MainWnd.notKingSprites[randomIndex];
+            Transform image = content.transform.GetChild(i - 3 * int.Parse(iptNum.text) + 3);
+            image.GetComponent<Image>().sprite =  MainWnd.notKingSprites[randomIndex];
+            image.GetChild(0).GetComponent<Text>().text = image.GetComponent<Image>().sprite.name;
             i++;
         }
     }
