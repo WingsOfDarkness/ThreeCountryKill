@@ -12,6 +12,7 @@ public class MainWnd : MonoBehaviour
     public GameObject quitConfirmWnd;
     public static Sprite[] kingSprites; // 存储所有图片的数组
     public static Sprite[] notKingSprites; // 存储所有图片的数组
+    public Text txtVersion;
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class MainWnd : MonoBehaviour
             // 获取指定文件夹中的所有图片，存储到textures数组中
             notKingSprites = Resources.LoadAll<Sprite>("NotKings/");
         }
+
+        txtVersion.text = "v" + Application.version;
     }
 
     public void OnClickResetConfirm()
@@ -37,7 +40,7 @@ public class MainWnd : MonoBehaviour
     {
         resetConfirmWnd.SetActive(false);
     }
-    
+
     public void OnClickQuitConfirm()
     {
         Application.Quit();
@@ -47,12 +50,12 @@ public class MainWnd : MonoBehaviour
     {
         quitConfirmWnd.SetActive(false);
     }
-    
+
     public void OnClickReset()
     {
         resetConfirmWnd.SetActive(true);
     }
-    
+
     public void OnClickQuit()
     {
         quitConfirmWnd.SetActive(true);
