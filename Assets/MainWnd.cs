@@ -13,6 +13,9 @@ public class MainWnd : MonoBehaviour
     public static Sprite[] kingSprites; // 存储所有图片的数组
     public static Sprite[] notKingSprites; // 存储所有图片的数组
     public Text txtVersion;
+    public AudioSource bgmAudio;
+    public GameObject btnBgmOn;
+    public GameObject btnBgmOff;
 
     private void Start()
     {
@@ -59,5 +62,19 @@ public class MainWnd : MonoBehaviour
     public void OnClickQuit()
     {
         quitConfirmWnd.SetActive(true);
+    }
+
+    public void OnClickBgmOn()
+    {
+        btnBgmOff.SetActive(true);
+        btnBgmOn.SetActive(false);
+        bgmAudio.Stop();
+    }
+    
+    public void OnClickBgmOff()
+    {
+        btnBgmOff.SetActive(false);
+        btnBgmOn.SetActive(true);
+        bgmAudio.Play();
     }
 }
