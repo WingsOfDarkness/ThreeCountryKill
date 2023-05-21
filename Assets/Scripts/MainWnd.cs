@@ -10,8 +10,8 @@ public class MainWnd : MonoBehaviour
 {
     public GameObject resetConfirmWnd;
     public GameObject quitConfirmWnd;
-    public static Sprite[] kingSprites; // 存储所有图片的数组
-    public static Sprite[] notKingSprites; // 存储所有图片的数组
+    public static Sprite[] KingSprites; // 存储所有图片的数组
+    public static Sprite[] NotKingSprites; // 存储所有图片的数组
     public Text txtVersion;
     public AudioSource bgmAudio;
     public GameObject btnBgmOn;
@@ -19,16 +19,16 @@ public class MainWnd : MonoBehaviour
 
     private void Start()
     {
-        if (kingSprites == null || kingSprites.Length == 0)
+        if (KingSprites == null || KingSprites.Length == 0)
         {
             // 获取指定文件夹中的所有图片，存储到textures数组中
-            kingSprites = Resources.LoadAll<Sprite>("Kings/");
+            KingSprites = Resources.LoadAll<Sprite>("Kings/");
         }
 
-        if (notKingSprites == null || notKingSprites.Length == 0)
+        if (NotKingSprites == null || NotKingSprites.Length == 0)
         {
             // 获取指定文件夹中的所有图片，存储到textures数组中
-            notKingSprites = Resources.LoadAll<Sprite>("NotKings/");
+            NotKingSprites = Resources.LoadAll<Sprite>("NotKings/");
         }
 
         txtVersion.text = "v" + Application.version;

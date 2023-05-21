@@ -13,7 +13,7 @@ using UnityEngine.UI;
 
 namespace DefaultNamespace
 {
-    public class FocusWnd:MonoBehaviour
+    public class FocusWnd : MonoBehaviour
     {
         public GameObject targetHero;
         public GameObject content;
@@ -23,7 +23,7 @@ namespace DefaultNamespace
         {
             gameObject.SetActive(false);
         }
-        
+
         public void OnClickSubmit()
         {
             if (targetHero == null) return;
@@ -34,6 +34,14 @@ namespace DefaultNamespace
                     Destroy(content.transform.GetChild(i).gameObject);
                 }
             }
+
+            //保存历史记录
+            for (int i = 6; i >= 0; i--)
+            {
+                PlayerPrefs.SetString("HistoryHero" + (i + 1), PlayerPrefs.GetString("HistoryHero" + i));
+            }
+
+            PlayerPrefs.SetString("HistoryHero0", targetHero.GetComponent<Image>().sprite.name);
 
             targetHero.transform.SetParent(content.transform.parent.parent);
             targetHero.transform.localPosition = new Vector2(0, 0);
