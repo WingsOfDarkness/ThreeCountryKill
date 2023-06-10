@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,11 +15,11 @@ public class HistoryWnd : MonoBehaviour
             string imgName = PlayerPrefs.GetString("HistoryHero" + i);
             bool isKing = false;
             bool isNotKing = false;
-            for (int j = 0; j < MainWnd.KingSprites.Length; j++)
+            for (int j = 0; j < MainWnd.instance.kingSprites.Length; j++)
             {
-                if (MainWnd.KingSprites[j].name == imgName)
+                if (MainWnd.instance.kingSprites[j].name == imgName)
                 {
-                    content.transform.GetChild(i).GetComponent<Image>().sprite = MainWnd.KingSprites[j];
+                    content.transform.GetChild(i).GetComponent<Image>().sprite = MainWnd.instance.kingSprites[j];
                     content.transform.GetChild(i).GetChild(0).GetComponent<Text>().text = imgName;
                     isKing = true;
                     break;
@@ -27,11 +28,11 @@ public class HistoryWnd : MonoBehaviour
 
             if (!isKing)
             {
-                for (int j = 0; j < MainWnd.NotKingSprites.Length; j++)
+                for (int j = 0; j < MainWnd.instance.notKingSprites.Length; j++)
                 {
-                    if (MainWnd.NotKingSprites[j].name == imgName)
+                    if (MainWnd.instance.notKingSprites[j].name == imgName)
                     {
-                        content.transform.GetChild(i).GetComponent<Image>().sprite = MainWnd.NotKingSprites[j];
+                        content.transform.GetChild(i).GetComponent<Image>().sprite = MainWnd.instance.notKingSprites[j];
                         content.transform.GetChild(i).GetChild(0).GetComponent<Text>().text = imgName;
                         isNotKing = true;
                         break;
